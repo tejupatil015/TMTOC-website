@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#060304">
+  <title>Madhavi Bhabhi Papad & Achar | Bhootiya Swad</title>
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Poppins:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="loading">
+
+  <!-- ===== Cinematic page-load screen ===== -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <div class="loader-title">Madhavi Bhabhi</div>
+      <div class="loader-sub">Papad &amp; Achar</div>
+      <div class="loader-bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- ===== Atmosphere layers ===== -->
+  <div class="fogwrap" id="fogwrap" aria-hidden="true">
+    <div class="fog-layer f1"></div>
+    <div class="fog-layer f2"></div>
+    <div class="fog-layer f3"></div>
+  </div>
+  <canvas class="embers" id="embers" aria-hidden="true"></canvas>
+  <div class="lightning" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#top" aria-label="Madhavi Bhabhi home">
+        <span>Madhavi Bhabhi</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#story">Story</a>
+        <a href="#products">Menu</a>
+        <a href="#order">Order</a>
+        <a class="nav-cta" href="#order">WhatsApp</a>
+        <button class="soundbtn" id="soundbtn" type="button" aria-pressed="false">
+          <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span id="soundlabel">Sound off</span>
+        </button>
+        <button class="lightbtn" id="lightbtn" type="button" aria-pressed="false">Lights off</button>
+        <span class="nav-indicator" id="navind" aria-hidden="true"></span>
+      </nav>
+    </div>
+    <div class="drips" id="drips" aria-hidden="true"></div>
+  </header>
+
+  <div class="saree" aria-hidden="true">
+    <svg viewBox="0 0 240 460" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="sg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#fffaf2" />
+          <stop offset=".55" stop-color="#e4dcea" />
+          <stop offset="1" stop-color="#b9afc8" />
+        </linearGradient>
+        <radialGradient id="fg" cx=".5" cy=".4" r=".7">
+          <stop offset="0" stop-color="#eee6e0" />
+          <stop offset=".7" stop-color="#c4b8ba" />
+          <stop offset="1" stop-color="#8f8388" />
+        </radialGradient>
+        <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#fff" />
+          <stop offset=".68" stop-color="#fff" />
+          <stop offset="1" stop-color="#000" />
+        </linearGradient>
+        <mask id="fm">
+          <rect width="240" height="460" fill="url(#fade)" />
+        </mask>
+        <filter id="rag" x="-10%" y="-5%" width="120%" height="110%">
+          <feTurbulence type="fractalNoise" baseFrequency=".018 .045" numOctaves="2" seed="7" />
+          <feDisplacementMap in="SourceGraphic" scale="9" />
+        </filter>
+        <filter id="bl">
+          <feGaussianBlur stdDeviation="2.2" />
+        </filter>
+      </defs>
+      <g mask="url(#fm)">
+        <!-- long wet hair behind -->
+        <g filter="url(#rag)">
+          <path
+            d="M84 70C76 16 164 16 156 70C170 140 160 240 182 330C148 290 140 220 138 150L102 150C100 220 92 290 58 330C80 240 70 140 84 70Z"
+            fill="#07040a" />
+          <path
+            d="M92 40C84 120 90 200 66 300M104 40C100 130 102 210 88 310M136 40C140 130 138 210 152 310M148 44C158 120 152 200 174 300"
+            stroke="#2a1a32" stroke-width="1.4" fill="none" />
+        </g>
+        <!-- neck -->
+        <path d="M108 104L106 132L134 132L132 104Z" fill="#b4a8ac" />
+        <!-- saree body -->
+        <g filter="url(#rag)">
+          <path
+            d="M106 126C82 134 64 154 58 205C48 285 30 370 14 470C60 480 100 450 120 466C152 450 194 482 228 468C210 370 192 285 182 205C176 154 158 134 134 126Z"
+            fill="url(#sg)" />
+          <path
+            d="M120 236C118 320 114 400 108 470M98 232C90 320 80 400 62 470M142 232C148 320 156 400 176 470M78 220C66 310 50 390 36 470M164 220C172 310 190 390 206 470"
+            stroke="#8c80a2" stroke-opacity=".38" stroke-width="2" fill="none" />
+          <!-- pallu over shoulder -->
+          <path
+            d="M90 128C112 152 150 200 198 300C208 350 210 410 214 470C190 420 168 340 126 262C102 210 88 166 90 128Z"
+            fill="#f3edf7" />
+          <path d="M90 128C112 152 150 200 198 300C208 350 210 410 214 470" stroke="#c9a24a" stroke-width="4"
+            fill="none" />
+          <path d="M96 132C116 156 152 204 196 300" stroke="#b5121b" stroke-width="1.6" fill="none" />
+          <path d="M110 190C130 230 160 270 176 330M100 170C118 214 150 262 168 330" stroke="#8c80a2"
+            stroke-opacity=".4" stroke-width="1.6" fill="none" />
+          <path d="M16 452C60 468 96 440 122 458C152 440 192 470 226 452" stroke="#b5121b" stroke-width="5"
+            fill="none" />
+        </g>
+        <!-- arm and long fingers -->
+        <path d="M74 146C58 200 50 262 48 314L60 316C64 262 72 210 86 158Z" fill="#b8acb0" />
+        <path
+          d="M50 314C46 336 44 356 42 374M54 315C52 340 52 362 52 382M58 315C58 338 60 358 62 376M61 314C64 334 68 350 72 366"
+          stroke="#b8acb0" stroke-width="3" stroke-linecap="round" fill="none" />
+        <!-- face -->
+        <ellipse cx="120" cy="78" rx="27" ry="35" fill="url(#fg)" />
+        <ellipse cx="100" cy="98" rx="6" ry="11" fill="#2a1820" opacity=".4" filter="url(#bl)" />
+        <ellipse cx="140" cy="98" rx="6" ry="11" fill="#2a1820" opacity=".4" filter="url(#bl)" />
+        <ellipse cx="108" cy="76" rx="8" ry="6.5" fill="#12060c" filter="url(#bl)" />
+        <ellipse cx="132" cy="76" rx="8" ry="6.5" fill="#12060c" filter="url(#bl)" />
+        <circle class="eye" cx="108" cy="77" r="2.3" fill="#ff2a3d" />
+        <circle class="eye" cx="132" cy="77" r="2.3" fill="#ff2a3d" />
+        <path d="M120 82L117 96Q120 99 123 96" stroke="#9a8d93" stroke-width="1.4" fill="none" />
+        <ellipse cx="120" cy="108" rx="6" ry="2.6" fill="#1a0a12" />
+        <circle cx="120" cy="53" r="2.2" fill="#b5121b" />
+        <!-- hair strands across face -->
+        <path d="M94 42C90 72 100 100 92 134M148 42C152 76 142 104 150 132M84 66C90 90 86 118 80 150" stroke="#07040a"
+          stroke-width="3" stroke-linecap="round" fill="none" />
+        <path d="M96 40C110 24 132 24 146 40C132 34 110 34 96 40Z" fill="#07040a" />
+        <!-- mist -->
+        <ellipse cx="120" cy="450" rx="110" ry="22" fill="#f6f0e4" opacity=".25" filter="url(#bl)" />
+      </g>
+    </svg>
+  </div>
+  <div class="bar" id="bar" aria-hidden="true"></div>
+  <div class="creep" id="creep" aria-hidden="true">👻</div>
+  <div class="dark" aria-hidden="true"></div>
+
+  <section class="hero" id="top">
+    <div class="ghost" aria-hidden="true"></div>
+    <div class="in hometext">
+      <h1>Madhavi Bhabhi<br><em>Papad &amp; Achar</em></h1>
+      <p>Itna tikha, bhoot bhi bhaag jaye! Homemade from a kitchen that is haunted, and proud of it.</p>
+      <div>
+        <a class="btn" href="#products">See the menu</a>
+        <a class="btn alt" href="#order">Order on WhatsApp</a>
+      </div>
+      <span class="whisper" style="right:10%;bottom:-60px">boo... dhundo mujhe</span>
+    </div>
+    <div class="fog"></div>
+  </section>
+
+  <section class="story" id="story">
+    <h2 class="">The ghost of Sasuma's recipe</h2>
+    <div>
+      <p>Forty years ago, Madhavi Bhabhi's mother-in-law took the secret achar masala to the grave. She never left the
+        kitchen.</p>
+      <p>Every night the jars rattle, the papad turns itself over on the terrace, and the masala tastes just a little
+        better by morning. Bhabhi stopped arguing with the ghost and made her the head of quality control.</p>
+      <p class="note">Sasuma's rule: no preservatives, no shortcuts, and no touching the mustard oil after dark.</p>
+    </div>
+    <span class="whisper" style="left:8%;top:40px;--r:3deg">Namak kam hai...</span>
+  </section>
+
+  <section class="products" id="products">
+    <h2>From the haunted pantry</h2>
+    <div class="grid">
+      <article class="card"><span class="em"><img src="lemon.png" alt=""></span>
+        <h3>Bhoot Jolokia Achar</h3><small>Ghost pepper, mustard oil, 400 g jar. Very hot.</small>
+        <div class="price">₹249<button data-add>Add</button></div>
+      </article>
+      <article class="card"><span class="em"><img src="mango.png" alt=""></span>
+        <h3>Pret Aam Ka Achar</h3><small>Raw mango, saunf, kalonji. Tangy and sweet, 500 g.</small>
+        <div class="price">₹229<button data-add>Add</button></div>
+      </article>
+      <article class="card"><span class="em"><img src="chili.png" alt=""></span>
+        <h3>Daayan Lasun Achar</h3><small>Whole garlic in red masala, 350 g. Keeps vampires away.</small>
+        <div class="price">₹219<button data-add>Add</button></div>
+      </article>
+      <article class="card"><span class="em"><img src="papad1.jpeg" alt=""></span>
+        <h3>Churail Chatpata Papad</h3><small>Urad dal, black pepper, hand-rolled, pack of 20.</small>
+        <div class="price">₹149<button data-add>Add</button></div>
+      </article>
+      <article class="card"><span class="em"><img src="papad2.jpeg" alt=""></span>
+        <h3>Masaan Masala Papad</h3><small>Extra jeera and hing. Roast on open flame, pack of 20.</small>
+        <div class="price">₹159<button data-add>Add</button></div>
+      </article>
+      <article class="card"><span class="em"><img src="papad3.jpeg" alt=""></span>
+        <h3>Bhoot Combo Box</h3><small>Any 2 achar and 1 papad pack, in a spooky gift box.</small>
+        <div class="price">₹549<button data-add>Add</button></div>
+      </article>
+    </div>
+    <span class="whisper" style="right:6%;top:-8px;--r:5deg">Chori chori chakh lo</span>
+  </section>
+
+  <section class="meter">
+    <h2>How brave is your tongue?</h2>
+    <div class="face" id="face">😇</div>
+    <div><input type="range" id="spice" min="0" max="4" value="0" aria-label="Spice level"></div>
+    <p id="mlabel">Friendly Ghost: mild</p>
+    <p id="mtip">Try the Pret Aam Ka Achar.</p>
+  </section>
+
+  <section class="order" id="order">
+    <h2>Summon your order</h2>
+    <div class="offerbadge" id="obadge">Offer BHOOT20 applied: 20% off + free papad above ₹500</div>
+    <p>Tell us what you want on WhatsApp. Orders <b id="cnt">0</b> item(s) in your basket.</p>
+    <a class="btn" id="wa"
+      href="https://wa.me/910000000000?text=Namaste%20Madhavi%20Bhabhi%2C%20I%20want%20to%20order%20achar%20and%20papad."
+      target="_blank" rel="noopener">Order on WhatsApp</a>
+  </section>
+
+  <footer>Made in a haunted kitchen. Psst... try typing something scary.</footer>
+
+  <button class="flyer" id="flyer" aria-label="Flying ghost: tap for a special offer"><span>👻</span></button>
+
+  <div class="secret" id="offer" role="dialog" aria-modal="true" aria-label="Special offer">
+    <div class="box">
+      <div class="big">🎁</div>
+      <h3>Special offer unlocked!</h3>
+      <p>The ghost is feeling generous. Get <b>20% off</b> and a <b>free Churail Chatpata Papad pack</b> on orders above
+        ₹500.</p>
+      <div class="code">BHOOT20</div><br>
+      <button class="btn" id="claim">Claim offer</button>
+    </div>
+  </div>
+
+  <div class="secret" id="secret" role="dialog" aria-modal="true" aria-label="Secret message">
+    <div class="box">
+      <div class="big">👵🏻</div>
+      <h3>Sasuma's ghost appears!</h3>
+      <p>You found my secret, beta. Take 13% off, and always add one pinch of hing.</p>
+      <div class="code">BHOOT13</div><br>
+      <button class="btn" id="close">Thanks, Sasuma</button>
+    </div>
+  </div>
+
+  <!-- Custom cursor (only enabled for mouse users) -->
+  <div class="cursor-ring" id="cring" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cdot" aria-hidden="true"></div>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>
