@@ -26,6 +26,8 @@ We transformed a traditional homemade papad and pickle business concept
 into an interactive horror-themed web experience using animation,
 sound, custom visuals and creative UI design.
 
+Live Project:https://tejupatil015.github.io/TMTOC-website/
+  
 ## 👥 Competition Project
 
 Created as part of a Web Development Competition – Wild Card Theme.
